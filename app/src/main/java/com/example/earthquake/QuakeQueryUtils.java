@@ -18,7 +18,7 @@ import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public final class QuakeQueryUtils {
-    
+
     private QuakeQueryUtils(){}
 
     public static ArrayList<Earthquake> extractQuery(){
@@ -30,8 +30,9 @@ public final class QuakeQueryUtils {
 
             Calendar cal = Calendar.getInstance();
 
+            cal.add(Calendar.DATE,1);
             Date today = cal.getTime();
-            cal.add(Calendar.DATE, -1);
+            cal.add(Calendar.DATE, -2);
             Date yesterday = cal.getTime();
 
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
