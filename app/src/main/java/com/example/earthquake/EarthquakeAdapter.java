@@ -22,7 +22,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
     }
 
     private String formatDate(Date obj){
-        SimpleDateFormat format = new SimpleDateFormat("DD MMM, yyyy");
+        SimpleDateFormat format = new SimpleDateFormat("dd MMM, yyyy");
         return format.format(obj);
     }
 
@@ -87,7 +87,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         String pname = currentItem.getPlace();
 
         if(pname.contains("of")){
-            String places[] = currentItem.getPlace().split("of");
+            String places[] = currentItem.getPlace().split("of ");
             place.setText(places[0]+"of");
             place1.setText(places[1]);
         } else{
